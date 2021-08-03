@@ -1,2 +1,24 @@
-allow system_app sysfs_fp_proximity:file { w_file_perms getattr };
-allow system_app fs_bpf:dir search;
+allow system_app sysfs_zram:dir search;
+allow system_app sysfs_zram:file r_file_perms;
+
+# Battery Health
+allow system_app sysfs_battery_supply:dir { search };
+allow system_app sysfs_battery_supply:file { read };
+allow system_app sysfs_battery_supply:file { open };
+allow system_app sysfs_battery_supply:file { getattr };
+
+# VioletParts
+allow system_app sysfs_fcharge:file { open read getattr write };
+allow system_app sysfs_fastcharge:file { open read getattr write };
+allow system_app kcal_dev:file rw_file_perms;
+allow system_app kcal_dev:dir search;
+
+# Vibration control
+allow system_app vibrator_dev:dir search;
+allow system_app vibrator_dev:file rw_file_perms;
+allow system_app sysfs_leds:dir search;
+
+allow system_app sysfs_tbrightness:file { open getattr write };
+
+get_prop(system_app, vendor_default_prop)
+
