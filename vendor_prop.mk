@@ -38,7 +38,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.ssr=false \
     ro.vendor.audio.sdk.ssr=false \
     ro.vendor.audio.sos=true \
-    ro.vendor.audio.voice.volume.boost=manual \
     tunnel.audio.encode = true \
     qcom.hw.aac.encoder=true
 
